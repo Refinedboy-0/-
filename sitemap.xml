@@ -1,8 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
-
-  <!-- Página principal -->
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+  <!--  Página principal  -->
   <url>
     <loc>https://refinedboy-0.github.io/-/</loc>
     <lastmod>2026-09-06</lastmod>
@@ -14,5 +12,4 @@
       <image:caption>Curated guide to the best skincare products, anti-aging serums, cleansers, and daily beauty routines</image:caption>
     </image:image>
   </url>
-
 </urlset>
