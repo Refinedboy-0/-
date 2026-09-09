@@ -175,6 +175,7 @@
           <span class="product-category">${cat ? cat.name : ""}</span>
           <h3 class="product-name">${product.name}</h3>
           <p class="product-desc">${product.description}</p>
+          ${product.price ? `<span class="product-price-note">${product.price}</span>` : ""}
           <div class="product-actions">
             <button class="btn-view" data-open="${product.id}">Details</button>
             ${isValidProductUrl(product.amazonUrl) ? `<a class="btn-amazon" href="${product.amazonUrl}" target="_blank" rel="noopener noreferrer sponsored" data-amazon="${product.id}">View on Amazon</a>` : ""}
