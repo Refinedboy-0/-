@@ -548,7 +548,7 @@
           "@type": "ListItem",
           "position": idx + 1,
           "item": {
-            "@type": "Product",
+            "@type": "Thing",
             "name": p.name,
             "description": p.description,
             "category": cat ? cat.name : ""
@@ -557,14 +557,13 @@
         if (p.image) {
           entry.item.image = SITE_URL + p.image;
         }
-        if (p.amazonUrl && /^https?:\/\//i.test(p.amazonUrl)) {
-          entry.item.offers = {
-            "@type": "Offer",
-            "url": p.amazonUrl,
-            "availability": "https://schema.org/InStock",
-            "seller": { "@type": "Organization", "name": "Amazon" }
-          };
-        }
+        // NOTA: el bloque "offers" (Offer/price) se retiró intencionalmente.
+        // Schema.org exige un "price" numérico real dentro de todo Offer —
+        // como todavía no hay integración con la API de Amazon para precios
+        // en vivo, declarar un Offer sin precio real generaba el error de
+        // Google Rich Results ("Se debe especificar price"). En cuanto haya
+        // precios reales vía API, volver a "@type": "Product" y añadir aquí
+        // un objeto offers con price y priceCurrency reales.
         return entry;
       })
     };
